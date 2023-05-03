@@ -16,8 +16,6 @@ h2 {
     width: 100%;
     height: 100vh;
     scroll-behavior: smooth;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
 }
 
 #container div {
@@ -35,7 +33,7 @@ h2 {
 }
 
 #container #page2 {
-
+    max-height: 100vh;
     background-image: url(../public/page\ 2\ bag.svg);
     background-repeat: round;
     background-size: cover;
@@ -47,7 +45,10 @@ h2 {
 }
 
 #container #page4 {
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-image: url(./assests/4pagebackground.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -136,8 +137,8 @@ h2 {
 
 .circle {
     position: absolute;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     border-radius: 20px;
     background-color: #000000;
     animation: animateCircle linear 2s infinite;
@@ -612,15 +613,7 @@ h2 {
 
 }
 
-#contactLinks {
-    display: flex;
-    justify-content: ;
-    align-items: center;
-    max-height: 50%;
-    max-width: 80%;
-    color: #fff;
-    /* background-color: red;*/
-}
+
 
 #links {
     display: flex;
@@ -629,24 +622,12 @@ h2 {
     max-height: 50%;
     width: 70%;
     top: -20%;
-    background-color: #00000054;
+    background-color: #41458449;
     padding: 10px;
     box-shadow: 5px 10px#0000003d;
     border-radius: 5px;
 }
 
-#contactLinks a {
-    padding: 2%;
-    text-decoration: none;
-    color: #fff;
-    font-size: 60px;
-    transition: 1.2s;
-}
-
-#contactLinks a :hover {
-    transition: .5s;
-    transform: scale(1.2);
-}
 
 #formSection {
     display: flex;
@@ -662,22 +643,22 @@ h2 {
 .form {
     display: flex;
     flex-direction: column;
-    max-width: 80%;
+    max-width: 60%;
     max-height: 60%;
-    align-items: center;
-    justify-content: space-between;
     /* background-color: #ffffff3e; */
     font-family: 'Righteous', cursive;
     padding: 40px;
     border-radius: 20px;
+    overflowX: hidden;
+    top: -1%;
 }
 
 .form h2 {
     position: relative;
-    text-align: center;
     padding: 0%;
+    top: -4%;
     margin: 0%;
-    color: #323377;
+    color: #ffffff;
 
 
 }
@@ -686,18 +667,16 @@ h2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    top: 5%;
-    max-width: 65%;
+    top: 15%;
+    max-width: 85%;
     height: 100%;
     border-radius: 10px;
-    background-color: #41458449;
+    /* background-color: #41458449; */
     /* background-image: url(./assests/socialLinkimg.jpg); */
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 5px 10px#0000003d;
+    /* box-shadow: 5px 10px#0000003d; */
     border-radius: 5px;
     /* border-color: #ffffff;
     border-style: solid; */
@@ -706,14 +685,14 @@ h2 {
 
 .form input {
     display: block;
-    width: 75%;
+    width: 100%;
     padding: 5%;
-    margin: 1%;
+    margin-bottom: 5%;
     border-radius: 5px;
     border: none;
     /* border-radius: 20px; */
     background: #0000004a;
-    color: rgba(0, 0, 0, 0.135);
+    color: white;
 }
 
 ::placeholder {
@@ -728,9 +707,10 @@ h2 {
 
 .form textarea {
 
-    width: 75%;
+    width: 102%;
+    height: 30%;
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5%;
     border-radius: 5px;
     border: none;
     /* border-radius: 20px; */
@@ -742,18 +722,194 @@ h2 {
     height: 12%;
     padding: 10px;
     margin-top: 1px;
-    border-radius: 5px;
-    border: solid;
+    border-radius: 60px;
+    border: none;
     border-width: 2px;
     /* border-bottom: 4px solid #3e4f24; */
-    background: #00000026;
-    font-size: 16px;
-    font-weight: 400;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: 1400;
     text-align: center;
-    color: #ffffff;
+    color: #1c3c73;
+    margin-top: 15%;
 }
 
 button:hover {
     transition: .34s;
+    transform: scale(1.2);
+}
+
+
+#contactSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #67dc0700;
+    max-height: 90%;
+}
+
+#contact {
+    background-color: #323377;
+    box-shadow: 10px 10px 11px 6px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 10px 10px 11px 6px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 10px 10px 11px 6px rgba(0, 0, 0, 0.58);
+    max-width: 25%;
+    max-height: 60%;
+    left: 5%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Righteous', cursive;
+    font-weight: 50;
+
+}
+
+#contactWrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: #8c070700;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contactWrapper>img {
+    position: absolute;
+    width: 7%;
+    top: 13%;
+    left: 27%;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d4f95;
+    max-width: 35%;
+    max-height: 80%;
+    z-index: 3;
+    color: #fff;
+    font-weight: 50;
+
+}
+
+#contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 5%;
+    justify-content: space-evenly;
+    max-height: 40%;
+    background: rgba(220, 4, 4, 0);
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 10;
+}
+
+#contactInfo h2 {
+    background-color: #c40e0e;
+    padding: 20%;
+}
+
+#contactLinks {
+    position: relative;
+    max-height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactLinks a {
+    font-size: 45px;
+
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    /* background-color: #000000; */
+}
+
+#contactLinks a :hover {
+    transition: .15s;
+    transform: scale(1.2);
+}
+
+
+#TopButton {
+    display: grid;
+    position: relative;
+    background-color: #ffffff;
+    top: -9%;
+    left: 95%;
+    z-index: 5;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    transition: .2s;
+    /* background-image: url(../src/assests/upArrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+}
+
+#footer {
+    background-color: #1c3c7300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+    border-color: #fff;
+    overflow: hidden;
+    max-width: 100%;
+
+}
+
+
+#upButton {
+    position: absolute;
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+    right: 2%;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: .2s;
+}
+
+#upButton:hover {
+    transform: scale(1.2);
+
+}
+
+#copyWrite {
+    background-color: #11c90e00;
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    left: 2%;
+    max-height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+}
+
+#TopButton>a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+#TopButton:hover {
     transform: scale(1.2);
 }

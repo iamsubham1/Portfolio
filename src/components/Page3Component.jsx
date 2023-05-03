@@ -1,7 +1,8 @@
 import React from 'react'
-import JourneyText from './JourneyText'
+
 import Waves from '../assests/waves.svg'
 import JourneyImg from '../assests/JourneyImage.jpg'
+
 
 const Background = () => {
     return (
